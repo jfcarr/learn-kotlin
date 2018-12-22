@@ -1,3 +1,7 @@
+fun sayHello(name: String) {
+	println("Hello, " + name + "!")
+}
+
 fun main(args: Array<String>) {
-	println("Hello, World!")
+	sayHello("World");
 }
