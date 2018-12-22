@@ -1,3 +1,6 @@
+KOTLINCOMPILER = kotlinc
+FORCEDELETE = -rm -f
+
 default:
 	@echo 'Usage:'
 	@echo '  make <target>'
@@ -13,7 +16,7 @@ run: build
 build: hello.jar
 
 hello.jar: hello.kt
-	kotlinc hello.kt -include-runtime -d hello.jar
+	$(KOTLINCOMPILER) hello.kt -include-runtime -d hello.jar
 
 clean:
-	-rm -f hello.jar
+	$(FORCEDELETE) hello.jar
